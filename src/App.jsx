@@ -85,7 +85,10 @@ function App() {
           </ToDoList>
 
           <Footer>
-            <Dialog isOpen={showDialog} onClose={toggleDialog} />
+            <Dialog isOpen={showDialog} onClose={toggleDialog}>
+              <p>This modal dialog has a groovy backdrop!</p>
+            </Dialog>
+
             <FabButton onClick={toggleDialog}>
               <IconPlus />
             </FabButton>
@@ -96,4 +99,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

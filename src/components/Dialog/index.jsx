@@ -1,5 +1,6 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './dialog.styles.css'
+import { IconClose } from '../icons';
 // import { IconClose } from '../icons';
 
 export const Dialog = ({ isOpen, onClose, children }) => {
@@ -26,9 +27,9 @@ export const Dialog = ({ isOpen, onClose, children }) => {
     return (
         <React.Fragment>
             <dialog ref={dialogRef} className='dialog'>
-                <div className='actions'>
+                <div className='btn-close-wrapper'>
                     <button autoFocus onClick={onClose} className='btn-close'>
-                        {/* <IconClose /> */}
+                        <IconClose />
                     </button>
                 </div>
 
