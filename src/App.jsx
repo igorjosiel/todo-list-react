@@ -10,6 +10,7 @@ import { IconPlus, IconSchool } from "./components/icons";
 import { SubHeading } from "./components/SubHeading";
 import { ToDoItem } from "./components/ToDoItem";
 import { ToDoList } from "./components/ToDoList";
+import { TodoForm } from "./components/TodoForm";
 
 const todos = [
   {
@@ -60,6 +61,11 @@ function App() {
     setShowDialog(!showDialog);
   }
 
+  const addTodo = () => {
+    console.log("Precisamos add um novo todo.");
+    toggleDialog();
+  }
+
   return (
     <main>
       <Container>
@@ -86,7 +92,7 @@ function App() {
 
           <Footer>
             <Dialog isOpen={showDialog} onClose={toggleDialog}>
-              <p>This modal dialog has a groovy backdrop!</p>
+              <TodoForm onSubmit={addTodo} />
             </Dialog>
 
             <FabButton onClick={toggleDialog}>
