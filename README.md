@@ -77,3 +77,7 @@ npm run dev
 **Funcionamento do gerenciamento de estado na aplicação:** criamos o contexto utilizando a função createContext do React, armazenando-o em uma constante e exportando-o. Foi criado um componente TodoProvider que encapsula a lógica de estado e as funções relacionadas aos todos (como addTodo, toggleTodoCompleted e deleteTodo) e depois são disponibilizados através da propriedade value do TodoContext.Provider. Por fim envolvemos o componente App para que toda a aplicação tenha acesso ao contexto, garantindo que todos os filhos de TodoProvider tenham acesso aos valores e funções que ele disponibiliza.
 
 **localStorage:** funcionalidade que permite persistir dados no navegador do usuário, armazenando-os como strings, o que exige serializar objetos com JSON.stringify antes de salvar e desserializar com JSON.parse ao recuperar para trabalhar com o dado no formato de objeto. Há uma boa prática de criar uma constante para a chave do localStorage (por exemplo, TODOS) para evitar erros de digitação, já que a string é utilizada em mais de um lugar diferente no código.
+
+**defaultValue:** propriedade utilizada para que o input possa ser inicializado com um valor padrão.
+
+**retorno no useEffect:** é uma prática fundamental para a limpeza de efeitos colaterais. O useEffect permite que você retorne uma função, e essa função de retorno é executada automaticamente pelo React quando o componente é desmontado (ou antes de uma nova execução do efeito, se as dependências mudarem).
