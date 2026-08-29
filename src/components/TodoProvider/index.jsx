@@ -79,10 +79,20 @@ export function TodoProvider({ children }) {
     });
   }
 
+  const pendingTodos = () => {
+    return todos.filter(todo => !todo.completed);
+  }
+
+  const completedTodos = () => {
+    return todos.filter(todo => todo.completed);
+  }
+
   return (
     <TodoContext
       value={{
         todos,
+        pendingTodos,
+        completedTodos,
         addTodo,
         toggleTodoCompleted,
         deleteTodo,
