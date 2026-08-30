@@ -17,6 +17,7 @@ export function ToDoItem ({ item }) {
             <p className="date">
                 {new Date(item.createdAt).toLocaleDateString('pt-BR')}
             </p>
+            
             <div className="details">
                 <input
                     type="checkbox"
@@ -24,6 +25,7 @@ export function ToDoItem ({ item }) {
                     defaultChecked={item.completed}
                     onClick={() => toggleTodoCompleted(item)}
                 />
+                
                 <p className="description">
                     {item.description}
                 </p>
