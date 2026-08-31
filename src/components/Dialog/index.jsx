@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import './dialog.styles.css'
 import { IconClose } from '../icons';
-// import { IconClose } from '../icons';
+import './dialog.styles.css'
 
 export const Dialog = ({ isOpen, onClose, children }) => {
     const dialogRef = useRef();
@@ -23,12 +22,10 @@ export const Dialog = ({ isOpen, onClose, children }) => {
         }
     }, [onClose]);
 
-    // "Show the dialog" button opens the dialog modally
     const openDialog = () => {
         dialogRef.current.showModal();
     };
 
-    // "Close" button closes the dialog
     const closeDialog = () => {
         dialogRef.current.close();
     };

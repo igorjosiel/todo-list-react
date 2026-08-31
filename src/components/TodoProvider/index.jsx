@@ -27,7 +27,7 @@ export function TodoProvider({ children }) {
 
     setSelectedTodo(null);
   }
-    
+
   const addTodo = (formData) => {
     const title = formData.get("title");
     const description = formData.get("description");

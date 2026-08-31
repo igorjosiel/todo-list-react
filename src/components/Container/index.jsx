@@ -1,7 +1,9 @@
-import './container.style.css'
+import './container.style.css';
 
-export function Container ({ children }) {
-    return (<section className='container'>
-        {children}
-    </section>)
+export function Container({ children }) {
+    return (
+        <section className='container'>
+            {children}
+        </section>
+    );
 }

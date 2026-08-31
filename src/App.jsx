@@ -65,7 +65,7 @@ function App() {
         </ChecklistsWrapper>
       </Container>
     </main>
-  )
+  );
 }
 
 export default App;
