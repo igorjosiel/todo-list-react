@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { IconClose } from '../icons';
-import './dialog.styles.css'
+import './dialog.style.css';
 
 export const Dialog = ({ isOpen, onClose, children }) => {
     const dialogRef = useRef();
